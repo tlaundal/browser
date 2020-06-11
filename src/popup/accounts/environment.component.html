@@ -58,6 +58,11 @@
                     <input id="iconsUrl" type="text" name="IconsUrl" [(ngModel)]="iconsUrl" inputmode="url"
                         appInputVerbatim>
                 </div>
+                <div class="box-content-row" appBoxRow>
+                    <label for="enterpriseUrl">{{'enterpriseUrl' | i18n}}</label>
+                    <input id="enterpriseUrl" type="text" name="EnterpriseUrl" [(ngModel)]="enterpriseUrl"
+                        inputmode="url" appInputVerbatim>
+                </div>
             </div>
             <div class="box-footer" [hidden]="!showCustom">
                 {{'customEnvironmentFooter' | i18n}}
