@@ -1288,5 +1288,8 @@
   },
   "vaultTimeoutLogOutConfirmationTitle": {
     "message": "Timeout Action Confirmation"
+  },
+  "enterpriseUrl": {
+    "message": "Enterprise Portal URL"
   }
 }
