@@ -1256,6 +1256,9 @@
   "cloneItem": {
     "message": "Clone Item"
   },
+  "addCurrentUri": {
+    "message": "Add current URI to item"
+  },
   "clone": {
     "message": "Clone"
   },

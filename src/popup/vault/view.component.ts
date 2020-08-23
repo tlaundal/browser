@@ -9,6 +9,8 @@ import {
     Router,
 } from '@angular/router';
 
+import { BrowserApi } from '../../browser/browserApi';
+
 import { AuditService } from 'jslib/abstractions/audit.service';
 import { CipherService } from 'jslib/abstractions/cipher.service';
 import { CryptoService } from 'jslib/abstractions/crypto.service';
@@ -78,6 +80,13 @@ export class ViewComponent extends BaseViewComponent {
                 cipherId: this.cipher.id,
             },
         });
+    }
+
+    async addURI() {
+        const tab = await BrowserApi.getTabFromCurrentWindow();
+        if (tab != null && tab.url != null) {
+            this.router.navigate(['/edit-cipher'], { queryParams: { cipherId: this.cipher.id, uri: tab.url } });
+        }
     }
 
     async restore() {
